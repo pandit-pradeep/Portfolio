@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div>
+        <div className='w-screen h-screen'>
             <h1>Navbar</h1>
         </div>
     )
