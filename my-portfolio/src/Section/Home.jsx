@@ -1,11 +1,14 @@
-import React from 'react'
+import ParticleBackground from "../components/ParticlesBackground"
 
-const Home = () => {
-  return (
-    <div>
-      
-    </div>
+
+
+export default function Home() {
+
+  return(
+    <section 
+    id="home" className="w-full h-screen relative bg-black overflow-hidden">
+      <ParticleBackground />  
+
+    </section>
   )
 }
-
-export default Home

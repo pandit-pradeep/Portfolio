@@ -1,17 +1,21 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import ParticlesBackground from './components/ParticlesBackground'
-import CustomCursor from './components/CustomCursor'
+import Navbar from "./components/Navbar";
+// import ParticleBackground from "./components/ParticlesBackground"
+import CustomCursor from "./components/CustomCursor";
+import Home from "./Section/Home";
 
 
-const App = () => {
+
+export default function App() {
+
+
   return (
-    <div className='relative gradient text-white'>
+    <div className="relative min-h-screen gradient text-white">
       <CustomCursor />
-      <ParticlesBackground />
+      {/* <ParticleBackground />   */}
       <Navbar />
+      <Home />
+    
     </div>
   )
-}
 
-export default App
+}
