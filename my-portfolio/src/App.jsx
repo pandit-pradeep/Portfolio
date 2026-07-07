@@ -29,10 +29,10 @@ export default function App() {
           <Navbar />
           <Home />
           <About />
+          <Skills />
           <Contact />
           <Project />
           <Footer />
-          <Skills />
           <Testimonials />
           {/* <IntroAnimation /> */}
 
