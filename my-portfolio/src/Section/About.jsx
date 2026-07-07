@@ -54,12 +54,12 @@ export default function About() {
             bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#1cd8d2]
             ">Pradeep Pandit</h2>
 
-            <p className="mt-3 text-lg sm:text-xl text-white/90 font-semibold">Full Stack Developer</p>
+            <p className="md:mt-2 mt-4 text-lg sm:text-xl text-white/90 font-semibold">Full Stack Developer</p>
 
-            <p className="mt-3 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">I transform ideas into modern, scalable, and user-focused web applications with clean architecture, intuitive design, and optimized performance. Passionate about building digital products that create meaningful user experiences.</p>
+            <p className="md:mt-2 mt-4 text-gray-300  text-base sm:text-lg max-w-2xl md:max-w-3xl">I transform ideas into modern, scalable, and user-focused web applications with clean architecture, intuitive design, and optimized performance. Passionate about building digital products that create meaningful user experiences.</p>
 
 
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl">
+            <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl">
               {stats.map((item, i) => (
                 <motion.div key={i} className="rounded-xl border  border-white/10 bg-white/5 px-4 py-3 text-center"
                   initial={{ opacity: 0, y: 10 }}
@@ -74,7 +74,7 @@ export default function About() {
               ))}
             </div>
 
-            <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justi  md:justify-start">
+            <div className="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justi  md:justify-start">
               <a href="#projects" className="inline-flex items-center justify-center rounded-lg bg-white text-black font-semibold px-5 py-3 hover:bg-gray-200 transition">View Project</a>
               <a href="#Contact" className="inline-flex items-center justify-center rounded-lg border border-white/20 text-white bg-white/10  font-semibold px-5 py-3 hover:bg-white/20 transition">Get in Tech</a>
             </div>
@@ -90,7 +90,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.4 }}
         >
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">About Me</h3>
-          <p className="text-gray-300 leading-relaxed text-base sm:text-lg">I'm a Full Stack Developer passionate about building modern, scalable, and user-focused web applications.
+          <p className="text-gray-300  text-base sm:text-lg">I'm a Full Stack Developer passionate about building modern, scalable, and user-focused web applications.
             I enjoy turning ideas into clean, efficient, and impactful digital solutions.</p>
           <p className="mt-3 text-gray-400 sm:text-lg text-base">I love turning ideas into scalable, user-friendly products that make an impact.</p>
         </motion.div>
