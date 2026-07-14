@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import { useScroll, useMotionValueEvent, AnimatePresence, motion } from "framer-motion";
 
-import img1 from "../assets/img1.JPG"
-import img2 from "../assets/img2.JPG"
-import img3 from "../assets/img3.JPG"
-import photo1 from "../assets/photo1.JPG"
-import photo2 from "../assets/photo2.PNG"
+import img1 from "../assets/img1.png"
+import img2 from "../assets/img2.png"
+import img3 from "../assets/img3.png"
+import photo1 from "../assets/photo1.png"
+import photo2 from "../assets/photo2.png"
 import photo3 from "../assets/photo3.png"
 
 
@@ -129,7 +129,7 @@ export default function Projects() {
                   style={{
                     position: "relative",
                     zIndex: 10,
-                    filter: "drop-ShadowRoot(0,16px 40px rgba(0,0,0,0.65))",
+                    filter: "drop-shadow(0,16px 40px rgba(0,0,0,0.65))",
                     transition: "filter 200ms ease"
                   }}
                   loading="lazy"
