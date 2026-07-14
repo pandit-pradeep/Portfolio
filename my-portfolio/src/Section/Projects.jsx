@@ -34,8 +34,8 @@ export default function Projects() {
 
   const projects = useMemo(
     () => [
-      
-     
+
+
       {
         title: "GapFinder",
         link: "https://razorpay-clone-661n.vercel.app/",
@@ -48,7 +48,7 @@ export default function Projects() {
         bgColor: "#EBEBEE",
         image: isMobile ? photo1 : img1, // use mobile or desktop image
       },
-       {
+      {
         title: "Edusity",
         link: "https://razorpay-clone-661n.vercel.app/",
         bgColor: "#504A6D",
@@ -136,12 +136,28 @@ export default function Projects() {
                   }}
                   loading="lazy"
                 />
+                <div className="pointer-events-none absolute inset-0"
+                  style={{
+                    zIndex: 11,
+                    background: "liner-gradient( 180deg , rgba(0,0,0,0.12) 0% , rgba(0,0,0,0)40%)"
+                  }}
+                >
+
+                </div>
               </div>
 
             </div>
           ))}
         </div>
 
+        <div className={`absolute ${isMobile? "bottom-10" : "bottom-5"}`}>
+          <a href={activeProject?.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-3 font-semibold rounded-lg bg-white text-black hover:bg-gray-200 transition-all"
+          aria-label={`View ${activeProject?.title}`}
+          >View Project</a>
+        </div>
       </div>
 
     </section>
