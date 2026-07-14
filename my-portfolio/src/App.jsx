@@ -6,7 +6,7 @@ import About from "./Section/About"
 import Contact from "./Section/Contact"
 import Skills from "./Section/Skills"
 import Footer from "./Section/Footer"
-import Project from "./Section/Project"
+import Projects from "./Section/Projects"
 import Testimonials from "./Section/Testimonials"
 import IntroAnimation from "./components/IntroAnimation";
 import React from "react";
@@ -30,8 +30,8 @@ export default function App() {
           <Home />
           <About />
           <Skills />
+          <Projects />
           <Contact />
-          <Project />
           <Footer />
           <Testimonials />
           {/* <IntroAnimation /> */}
