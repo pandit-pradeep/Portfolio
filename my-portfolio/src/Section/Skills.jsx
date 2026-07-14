@@ -84,8 +84,13 @@ export default function Skills() {
       }
       x.set(next);
       id = requestAnimationFrame(tick);
-      return () => cancelAnimationFrame(id);
+      // return () => cancelAnimationFrame(id);
     }
+
+    id = requestAnimationFrame(tick);
+      return () => cancelAnimationFrame(id);
+
+    
 
   }, [dir, x]);
 
