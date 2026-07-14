@@ -34,23 +34,25 @@ export default function Projects() {
 
   const projects = useMemo(
     () => [
-      {
-        title: "Grociry",
-        link: "https://razorpay-clone-661n.vercel.app/",
-        bgColor: "#0d4d3d",
-        image: isMobile ? photo1 : img1, // use mobile or desktop image
-      },
-      {
-        title: "Edusity",
-        link: "https://razorpay-clone-661n.vercel.app/",
-        bgColor: "#3884d3",
-        image: isMobile ? photo2 : img2,
-      },
+      
+     
       {
         title: "GapFinder",
         link: "https://razorpay-clone-661n.vercel.app/",
-        bgColor: "#dc9317",
+        bgColor: "#0C0E1B",
         image: isMobile ? photo3 : img3,
+      },
+      {
+        title: "Grociry",
+        link: "https://razorpay-clone-661n.vercel.app/",
+        bgColor: "#EBEBEE",
+        image: isMobile ? photo1 : img1, // use mobile or desktop image
+      },
+       {
+        title: "Edusity",
+        link: "https://razorpay-clone-661n.vercel.app/",
+        bgColor: "#504A6D",
+        image: isMobile ? photo2 : img2,
       },
     ],
     [isMobile] // re-run only when `isMobile` changes
