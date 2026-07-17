@@ -120,7 +120,7 @@ export default function Projects() {
               </AnimatePresence>
 
               <div className={`relative w-full overflow-hidden bg-black/20 shadow-2xl md:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)] ${isMobile ? "mb-6 rounded-lg" : "mb-10 sm:mb-12 rounded-xl"
-                } h-[65vh] sm:h-[66vh]`}
+                } h-[62vh] sm:h-[66vh]`}
                 style={{
                   zIndex: 10,
                   transition: "box-shadow 250ms ease"
@@ -150,7 +150,7 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className={`absolute ${isMobile? "bottom-10" : "bottom-5"}`}>
+        <div className={`absolute ${isMobile? "bottom-2" : "bottom-5"}`}>
           <a href={activeProject?.link}
           target="_blank"
           rel="noopener noreferrer"
