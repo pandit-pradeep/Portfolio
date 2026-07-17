@@ -68,6 +68,9 @@ export default function Contact() {
         budget:"",
         idea:"",
       });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setStatus("Failed to send message. Please try again later.");
     }
   }
   
