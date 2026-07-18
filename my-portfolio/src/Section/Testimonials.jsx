@@ -63,7 +63,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.2 }}
             viewport={{ once: true }}
-            className="bg-white/10 backdrop-blur-lg border-white/20 rounded-2xl p-6 flex flex-col items-center text-center transform transition duration-500 hover:scale-105 hover:-right-1 ">
+            className="bg-white/10 backdrop-blur-lg border-white/20 rounded-2xl p-6 flex flex-col items-center text-center transform transition duration-500 hover:scale-105 hover:-rotate-2  hover:shadow-lg hover:shadow-white/20 ">
 
             <img src={t.image} alt={t.name} className="w-20 h-20 rounded-full border-2 border-white/40 mb-4 object-cover " loading="lazy" />
 
