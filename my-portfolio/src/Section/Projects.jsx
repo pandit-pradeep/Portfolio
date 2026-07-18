@@ -44,7 +44,7 @@ export default function Projects() {
       },
       {
         title: "Grociry",
-        link: "https://razorpay-clone-661n.vercel.app/",
+        link: "https://grociry-web.netlify.app/",
         bgColor: "#EBEBEE",
         image: isMobile ? photo1 : img1, // use mobile or desktop image
       },
