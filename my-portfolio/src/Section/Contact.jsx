@@ -10,6 +10,11 @@ const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
 
+
+console.log("SERVICE_ID:", SERVICE_ID);
+console.log("TEMPLATE_ID:", TEMPLATE_ID);
+console.log("PUBLIC_KEY:", PUBLIC_KEY);
+
 export default function Contact() {
 
   const [formData, setFormData] = useState({
@@ -29,17 +34,17 @@ export default function Contact() {
     const { name, value } = e.target;
     if (name === "budget" && value && !/^\d+$/.test(value)) return; // Only allow numeric input for budget
     setFormData((p) => ({ ...p, [name]: value }));
-    if (errors[name]) {
+    if (errors[name])
       setErrors((p) => ({ ...p, [name]: "" }));
-    }
+
   };
 
   // const validateForm = () => {
   //   const required = ["name", "email", "service", "idea"];
   //   const newErrors = {};
-  //   required.forEach((f) => !formData[f].trim() && (newErrors[f] = "This field is required"));
+  //   required.forEach((f) => !formData[f].trim() && (newErrors[f] = "Fill this field "));
   //   if (formData.service !== "other" && !formData.budget.trim()) {
-  //     newErrors.budget = "This field is required";
+  //     newErrors.budget = "Fill this field";
   //     setErrors(newErrors);
   //     return !Object.keys(newErrors).length;
   //   }
@@ -48,28 +53,28 @@ export default function Contact() {
 
 
 
-  const validateForm = () => {
-  const required = ["name", "email", "service", "idea"];
-  const newErrors = {};
+    const validateForm = () => {
+    const required = ["name", "email", "service", "idea"];
+    const newErrors = {};
 
-  required.forEach((field) => {
-    if (!formData[field].trim()) {
-      newErrors[field] = "This field is required";
+    required.forEach((field) => {
+      if (!formData[field].trim()) {
+        newErrors[field] = "This field is required";
+      }
+    });
+
+    if (
+      formData.service &&
+      formData.service !== "other" &&
+      !formData.budget.trim()
+    ) {
+      newErrors.budget = "This field is required";
     }
-  });
 
-  if (
-    formData.service &&
-    formData.service !== "other" &&
-    !formData.budget.trim()
-  ) {
-    newErrors.budget = "This field is required";
-  }
+    setErrors(newErrors);
 
-  setErrors(newErrors);
-
-  return Object.keys(newErrors).length === 0;
-};
+    return Object.keys(newErrors).length === 0;
+  };
 
 
 
@@ -81,7 +86,7 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-    setStatus("sending....");
+    setStatus("sending");
 
 
 
@@ -105,7 +110,7 @@ export default function Contact() {
         idea: "",
       });
     } catch (err) {
-      console.error("Error sending email:", err);
+      console.error("EmailJS Error:", err);
       setStatus("error");
     }
   }
@@ -207,9 +212,10 @@ export default function Contact() {
                 <input type="text"
                   name="budget"
                   placeholder="Your Budget"
-                  value={formData.budget}
                   onChange={handleChange}
-                  className={`p-3 rounded-md bg-white/10 border ${errors.budget ? "border-red-500" : "border-gray-500"} text-white focus:outline-none  focus:border-blue-500`} />
+                  value={formData.budget}
+                  className={`p-3 rounded-md bg-white/10 border ${errors.budget ? "border-red-500" : "border-gray-500"} text-white focus:outline-none  focus:border-blue-500`}
+                   />
                 {errors.budget && <p className="text-red-500 text-xs">{errors.budget} </p>}
 
               </div>
@@ -231,8 +237,8 @@ export default function Contact() {
 
 
             {status && (
-              <p className={`text-sm ${status === " success" ? "text-green-400" : status === "error" ? "text-red-400" : "text-yellow-400"} `} >
-                {status === "sending" ? "sending..." : status === "success" ? "Message sent successfully ✅" : "Failed to send message. Please try again later ❌"}
+              <p className={`text-sm ${status === "success" ? "text-green-400" : status === "error" ? "text-red-400" : "text-yellow-400"} `} >
+                {status === "sending" ? "sending..." : status === "success" ? "Message sent successfully ✅" : "Something went wrong ❌"}
               </p>
             )}
 
