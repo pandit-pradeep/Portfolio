@@ -38,7 +38,7 @@ export default function Projects() {
 
       {
         title: "GapFinder",
-        link: "https://razorpay-clone-661n.vercel.app/",
+        link: "https://gap-finder-app.netlify.app/",
         bgColor: "#0C0E1B",
         image: isMobile ? photo3 : img3,
       },
