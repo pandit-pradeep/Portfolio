@@ -50,7 +50,7 @@ export default function Projects() {
       },
       {
         title: "Edusity",
-        link: "https://razorpay-clone-661n.vercel.app/",
+        link: "https://edusity-ed.netlify.app/",
         bgColor: "#504A6D",
         image: isMobile ? photo2 : img2,
       },
