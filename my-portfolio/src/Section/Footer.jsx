@@ -43,7 +43,7 @@ export default function Footer() {
             textShadow: "0 2px 18px rgba(0,0,0,0.45)"
           }}
         >
-          Pradeep Pandit
+          Pradeep Pandit Jii
         </h1>
 
         <div className="h-[3px] w-24 md:w-32 rounded-full bg-gradient-to-r from-[#0d58cc] via-cyan-300 to-emerald-400 " />
